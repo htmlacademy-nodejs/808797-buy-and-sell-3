@@ -1,7 +1,7 @@
 # Учебный проект «Куплю. Продам» [![Build status][travis-image]][travis-url]
 
 * Студент: [Алексей Гурин](https://up.htmlacademy.ru/nodejs/3/user/808797).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Миловидов](https://htmlacademy.ru/profile/id1144203).
 
 ---
 
