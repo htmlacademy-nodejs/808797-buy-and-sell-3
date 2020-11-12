@@ -7,9 +7,11 @@ const FILE_NAME = `mocks.json`;
 const generate = {
   name: `--generate`,
   run(args) {
-    // const offers = generateOffers(Number.parseInt(args[0], 10) || DEFAULT_COUNT);
-    // const offers = JSON.stringify(generateOffers(Number.parseInt(args[0], 10) || DEFAULT_COUNT));
-    const offers = JSON.stringify(generateOffers(Number.parseInt(args[0], 10) || DEFAULT_COUNT), null, `\t`);
+    let count = Number.parseInt(args[0], 10) || DEFAULT_COUNT;
+    if (count > 1000) {
+      return console.info(`Не больше 1000 объявлений`);
+    }
+    const offers = JSON.stringify(generateOffers(count), null, `\t`);
     console.info(offers);
     fs.writeFile(FILE_NAME, offers, (err) => {
       if (err) {
@@ -17,6 +19,7 @@ const generate = {
       }
       return console.info(`Operation success. File created.`);
     });
+    return null;
   }
 };
 
