@@ -1,5 +1,5 @@
 import require from '../require.js';
-
+// import packageJsonFile from '../../../package.json'; // Будем работать только с флагом --experimental-json-modules
 const packageJsonFile = require(`../../../package.json`, import.meta.url);
 
 const version = {
